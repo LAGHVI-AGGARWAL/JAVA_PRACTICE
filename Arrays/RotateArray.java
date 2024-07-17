@@ -24,5 +24,45 @@ public class Main
 	    for(int m = 0; m < n; m++){
 	        System.out.print(brr[m] + " ");
 	    }
+
+	//  not using an extra array 
+		if(n > 1){
+    	   int i = 0;
+    	   int j = n - 1;
+    	   while(i <= j){
+    	       int temp = arr[i];
+    	       arr[i] = arr[j];
+    	       arr[j] = temp;
+    	       i++;
+    	       j--;
+    	   }
+    	   
+    	   
+    	   int m = 0;
+    	   int l = k - 1;
+    	   while(m <= l){
+    	       int temp1 = arr[m];
+    	       arr[m] = arr[l];
+    	       arr[l] = temp1;
+    	       m++;
+    	       l--;
+    	   }
+    	   
+    	   
+    	   int p = k;
+    	   int o = n - 1;
+    	   while(p <= o){
+    	       int temp2 = arr[p];
+    	       arr[p] = arr[o];
+    	       arr[o] = temp2;
+    	       p++;
+    	       o--;
+    	   }
+	   }
+	   
+	   for(int q = 0; q < n; q++){
+	       System.out.print(arr[q] + " ");
+    	}
+	   
 	}
 }
