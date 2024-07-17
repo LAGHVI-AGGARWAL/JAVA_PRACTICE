@@ -3,11 +3,18 @@ public class Main
 {
 	public static void main(String[] args) {
 	    Scanner sc = new Scanner(System.in);
-	    int[] arr = {10,20,30,40,50,60,70};
+	    int[] arr = {1};
 	    int n = arr.length;
 	    int[] brr = new int[n];
 	    int k = sc.nextInt();
-	    
+
+		//  using an extra array approach 
+	    if(n == 1){
+	        brr[0] = arr[0];
+	    }
+	    if(k > n){
+	        k = k % n;
+	    }
 	    for(int i = 0; i < k; i++){
 	        brr[i] = arr[n-k+i];
 	    }
