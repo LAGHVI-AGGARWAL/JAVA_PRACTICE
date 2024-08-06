@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class Main
 {
@@ -12,10 +13,11 @@ public class Main
     
     public static int maxArray1(int arr[], int n, int i, int max){
         if(i == n-1){
-            return arr[i];
+            max = arr[i];
+            return max;
         }
-        maxArray(arr,n,i+1,max);
-        max = Math.max(arr[i],max);
+        max = maxArray1(arr,n,i+1,max);
+        Math.max(arr[i],max);
         return max;
     }
     
@@ -27,7 +29,7 @@ public class Main
 	        arr[i] = sc.nextInt();
 	    }
 	    int max = Integer.MIN_VALUE;
-	    maxArray(arr,n,0,max);
-	    maxArray1(arr,n,0,max);
+	   maxArray(arr,n,0,max);
+	    System.out.println(maxArray1(arr,n,0,max));
 	}
 }
